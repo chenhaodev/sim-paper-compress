@@ -1,4 +1,4 @@
-%% Example: Basis pursuit denoising (BPD) with the DFT
+%% Example: Basis pursuit denoising (bpd) with the DFT
 % Estimation of sinusoids in white Gaussian noise
 
 
@@ -6,6 +6,7 @@
 
 clear
 close all
+path(path, '../../libs/SALSA')
 
 I = sqrt(-1);
 
@@ -68,7 +69,7 @@ ylabel('abs( A^H y )')
 xlabel('Frequency')
 
 
-%% Solve BPD problem
+%% Solve bpd problem
 
 beta = 3;
 beta = 2.5;
@@ -77,7 +78,7 @@ lam = beta * sigma * normA;
 mu = 0.1;
 Nit = 100;
 
-[c, cost] = BPD(y, A, AH, lam, mu, Nit);
+[c, cost] = bpd(y, A, AH, lam, mu, Nit);
 
 x = A(c);
 
@@ -101,7 +102,7 @@ ylabel('real( Ac )')
 
 subplot(2, 1, 2)
 plot(f, abs(c), '.-')
-title(sprintf('BPD DFT coefficients (beta = %.2f)', beta));
+title(sprintf('bpd DFT coefficients (beta = %.2f)', beta));
 ylabel('abs( c )')
 xlabel('Frequency')
 
@@ -166,8 +167,8 @@ xlim([0 0.5])
 
 subplot(4, 1, 3)
 line(f, abs(c), 'marker', '.')
-% title('DFT coefficients [Output of BPD]');
-mytitle(sprintf('BPD DFT (beta = %.2f)', beta));
+% title('DFT coefficients [Output of bpd]');
+mytitle(sprintf('bpd DFT (beta = %.2f)', beta));
 ylabel('abs( c )')
 xlabel('Frequency (Hz)')
 xlim([0 0.5])
@@ -181,11 +182,11 @@ ylim([-3 3])
 
 % print figure to pdf file
 orient tall
-print -dpdf figures/BPD_example_dft
+print -dpdf figures/bpd_example_dft
 
 % print figure to eps file
 set(gcf, 'PaperPosition', [1 1 4 7])
-print -deps figures_eps/BPD_example_dft
+print -deps figures_eps/bpd_example_dft
 
 MyGraphPrefs('off')
 %}
@@ -195,7 +196,7 @@ MyGraphPrefs('off')
 for beta = 0.1:0.1:3
 
     lam = beta * sigma * normA;
-    [c, cost] = BPD(y, A, AH, lam, mu, Nit);
+    [c, cost] = bpd(y, A, AH, lam, mu, Nit);
     x = A(c);
     
     figure(10)
@@ -205,7 +206,7 @@ for beta = 0.1:0.1:3
     plot(f, abs(c), '.-')
     xlim([0 0.5])
     ylim([0 1.5*cmax])
-    title(sprintf('BPD-optimal DFT coefficients : \\lambda = \\beta\\sigma ||a||, \\beta = %.2f', beta));
+    title(sprintf('bpd-optimal DFT coefficients : \\lambda = \\beta\\sigma ||a||, \\beta = %.2f', beta));
 %     title(sprintf('\\beta = %.2f; \\lambda = \\beta \\sigma ||a||', beta));
     ylabel('abs( c )')
     xlabel('Frequency')

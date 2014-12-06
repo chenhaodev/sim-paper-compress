@@ -1,0 +1,22 @@
+Matlab code function lookup
+====
+http://www.mathworks.com/help/
+
+VIM history for revise
+====
+
+add library
+----
+../../libs/
+
+global replace
+----
+'<,'>s/rcosamp/residue_cosamp/g
+'<,'>s/xcosamp/X_cosamp/g
+'<,'>s/residue/residue_cosamp/g
+'<,'>s/BPD/bpd/g
+'<,'>s/Its/iter/g
+'<,'>s/kk/k/g
+'<,'>s/K/S/g
+'<,'>s/yy/Y/g
+'<,'>s/xhat/X_hat/g
