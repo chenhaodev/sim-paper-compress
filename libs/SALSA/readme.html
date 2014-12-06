@@ -1,0 +1,166 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+
+	<title>
+	Dual BP/BPD
+	</title>
+</head>
+
+<body>
+
+
+<h3>
+L1 penalized least squares with SALSA
+</h3>
+
+
+<p>
+This folder contains MATLAB functions to implement:
+<!--
+basis pursuit (BP), 
+basis pursuit denoising (BPD),
+dual basis pursuit (dual BP),
+and dual basis pursuit denoising (dual BPD).
+-->
+</p>
+<ul>
+<li>
+	basis pursuit (BP), 
+</li>
+<li>
+	basis pursuit denoising (BPD),
+</li>
+<li>
+	dual basis pursuit (dual BP),
+</li>
+<li>
+	dual basis pursuit denoising (dual BPD).
+</li>
+</ul>
+
+
+<h4>
+MATLAB functions
+</h4>
+<ul>
+<li>
+	<a href="BP.m">BP.m</a>
+</li>
+<li>
+	<a href="BPD.m">BPD.m</a>
+</li>
+<li>
+	<a href="dualBP.m">dualBP.m</a>
+</li>
+<li>
+	<a href="dualBPD.m">dualBPD.m</a>
+</li>
+</ul>
+
+
+<!--
+<h4>
+Dual BP
+</h4>
+<p>
+x = x1 + x2
+</p>
+<p>
+Dual BP models a signal as the sum of two signal which 
+in turn admit sparse representations with respect to
+mutually incoherent over-complete bases.
+Dual BP is based on minimizing the function
+F(c1, c2) = theta ||c1||_1 + (1-theta) ||c2||_2
+subject to x = A1 c1 + A2 c2.
+</p>
+
+<h4>
+Dual BPD
+</h4>
+<p>
+x = x1 + x2 + residual
+</p>
+<p>
+Dual BPD allows for the presence of a residual term. 
+As a consequence, the sum of x1 and x2 is not exactly x.
+Dual BPD is based on minimizing the function
+F(c1, c2) = ||x - A1 c1 + A2 c2||_2^2 + lam1 ||c1||_1 + lam2 ||c2||_2.
+</p>
+-->
+
+
+
+<h4>Examples</h4>
+
+<p>
+Illustrative examples with real and complex data.
+</p>
+
+<ul>
+	<li>
+	<a href="html/BP_example_dft_cplx.html">BP with DFT (complex data) </a>
+	</li>
+
+	<li>
+	<a href="html/BPD_example_dft.html">BPD with DFT</a>
+	</li>
+
+	<li>
+	<a href="html/BPD_example_stft.html">BPD with STFT</a>
+	</li>
+
+	<li>
+	<a href="html/dualBP_example1.html">dual BP with DFT and STFT</a>
+	</li>
+
+	<li>
+	<a href="html/dualBPD_example1.html">dual BPD with DFT and STFT</a>
+	</li>
+
+	<li>
+	<a href="html/BPD_example_dft_cplx.html">BPD with DFT (complex data)</a>
+	</li>
+
+	<li>
+	<a href="html/BPD_example_stft_cplx.html">BPD with STFT (complex data)</a>
+	</li>
+
+	<li>
+	<a href="html/dualBPD_example1_cplx.html">dual BPD with DFT and STFT (complex data)</a>
+	</li>
+
+</ul>
+
+<p>
+The implementation here assumes that A1 and A2 are Parseval 
+frames; i.e., 
+    A A^H = I
+</p>
+
+<h4>Web</h4>
+
+<p>
+<a href="http://eeweb.poly.edu/iselesni/lecture_notes/SALSA/">http://eeweb.poly.edu/iselesni/lecture_notes/SALSA/</a>
+</p>
+
+<h4>Contact</h4>
+
+<pre>
+Ivan Selesnick
+Email: selesi@poly.edu
+Electrical and Computer Engineering Dept.
+NYU Polytechnic School of Engineering
+Brooklyn, New York, USA
+</pre>
+
+</body>
+
+</html>
+
+

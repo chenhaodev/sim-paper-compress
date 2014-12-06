@@ -1,6 +1,6 @@
-function [x, cost] = BPD(y, A, AH, lambda, mu, Nit)
+function [x, cost] = bpd(y, A, AH, lambda, mu, Nit)
 
-% x = BPD(y, A, AH, lambda, mu, Nit)
+% x = bpd(y, A, AH, lambda, mu, Nit)
 %
 % BASIS PURSUIT DENOISING
 % minimize 0.5 * ||y - A x||_2^2 + lambda * || x ||_1
@@ -15,7 +15,7 @@ function [x, cost] = BPD(y, A, AH, lambda, mu, Nit)
 % OUTPUT
 %   x : minimizing vector
 %
-% Use [x, cost] = BPD(...) to obtain cost function per iteration
+% Use [x, cost] = bpd(...) to obtain cost function per iteration
 
 % Reference
 % M. V. Afonso, J. M. Bioucas-Dias, and M. A. T. Figueiredo.

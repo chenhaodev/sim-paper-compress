@@ -2,7 +2,7 @@
 % tests cosamp.m
 
 clear, close all, clc
-%path(path,'../Utils')
+path(path, '../../libs/Utils')
 
 N = 1024; % signal length
 K = 40; % signal sparsity

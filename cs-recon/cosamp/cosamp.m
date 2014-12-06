@@ -18,6 +18,8 @@
 
 function [X_hat,X_cosamp] = cosamp(Y, Phi, S, iter)
 
+path(path, '../../libs/Utils')
+
 Y = Y(:);
 [M,N] = size(Phi);
 
