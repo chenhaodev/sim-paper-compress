@@ -1,3 +1,14 @@
+
+cognitive radio source
+====
+http://intcube.com/Education/comm_301208.htm
+http://search.edaboard.com/matlab-cognitive-radio.html
+http://www.mathworks.com/matlabcentral/
+http://s.pudn.com/search_hot_en.asp?k=cognitive+radio+matlab#
+
+compressed sensing source
+====
+
 Matlab code function lookup
 ====
 http://www.mathworks.com/help/
